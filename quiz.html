@@ -1,0 +1,136 @@
+<!doctype HTML>
+<html>
+  <head>
+      <link href="quiz.css" rel="stylesheet">
+      <title> Quiz </title>
+  </head>
+
+  <body>
+    <header class="topnav">
+        <nav>
+            <ul>
+                <li><a href="./home.html" title="Home">Home</a></li>
+                <li><a href="./hobbies.html" title="Hobbies">Hobbies</a></li>
+                <li><a href="./quiz.html" title="Quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1> How well do you know me? </h1>
+    <form>
+      <ol>
+        <li>
+          <label> When is my birthday? </label> <br>
+          <input type = "date" id = "birthday"> </input>
+        </li>
+        <div id = "answer1"> </div>
+
+        <li>
+          <label> What is(are) my favorite food(s)? </label> <br>
+          <input type = "checkbox" name ="food" id = "pizza"> Pizza </input> <br>
+          <input type = "checkbox" name ="food" id = "yogurt"> Yogurt </input> <br>
+          <input type = "checkbox" name ="food" id = "oreos"> Oreos </input> <br>
+          <input type = "checkbox" name ="food" id = "pasta"> Pasta </input> <br>
+          <input type = "checkbox" name ="food" id = "none of the above">  None of the above </input> <br>
+        </li>
+        <div id = "answer2"> </div>
+
+        <li>
+          <label> What is my sister's name? </label> <br>
+          <input type = "radio" name = "sibling" id = "Isha"> Isha </input> <br>
+          <input type = "radio" name = "sibling" id = "Ishani"> Ishani </input> <br>
+          <input type = "radio" name = "sibling" id = "Ishana"> Ishana </input> <br>
+          <input type = "radio" name = "sibling" id = "Ishi"> Ishi </input> <br>
+        </li>
+        <div id = "answer3">  </div>
+
+        <li>
+          <label> What is(are) my favorite color(s)? </label> <br>
+          <input type = "checkbox" name = "color" id = "blue" > Blue </input> <br>
+          <input type = "checkbox" name = "color" id = "purple" > Purple </input> <br>
+          <input type = "checkbox" name = "color" id = "yellow" > Yellow </input> <br>
+          <input type = "checkbox" name = "color" id = "none of the above"> None of the above </input> <br>
+        </li>
+        <div id = "answer4"> </div>
+
+        <li>
+          <label> Do I have a dog?</label> <br>
+          <input type = "radio" name = "dog" id = "yes"> Yes </input> <br>
+          <input type = "radio" name = "dog" id = "no"> No </input> <br>
+        </li>
+        <div id = "answer5"> </div>
+
+        <li>
+          <label> What is my biggest fear? </label> <br>
+          <input type = "checkbox" name = "color" id = "heights/falling" > Heights/Falling </input> <br>
+          <input type = "checkbox" name = "color" id = "drowning/the ocean" > Drowning/The ocean </input> <br>
+          <input type = "checkbox" name = "color" id = "the dark" > The dark </input> <br>
+          <input type = "checkbox" name = "color" id = "spiders/bugs "> Spiders/Bugs </input> <br>
+        </li>
+        <div id = "answer6"> </div>
+
+        <button type = "button" onclick = "rightOrWrong()"> Submit </button>
+
+      </ol>
+    </form>
+
+    <script>
+      var birthday = document.getElementById("birthday");
+      var food = document.getElementById("none of the above");
+      var color = document.getElementById("none of the above");
+      var sibling = document.getElementById("Ishani");
+      var dog = document.getElementById("yes");
+      var fear = document.getElementById("drowning/the ocean");
+
+
+      function rightOrWrong(){
+
+        if (birthday.value == '2006-02-05'){
+          answer1.innerHTML="You got my birthday right!";
+        }
+        else {
+          answer1.innerHTML="You got my birthday wrong!";
+        }
+
+
+        if (food.checked){
+          answer2.innerHTML="You got this question right!";
+        }
+        else {
+          answer2.innerHTML="You got my favorite food wrong!";
+        }
+
+        if (color.checked){
+          answer4.innerHTML = "You got my favorite color right!";
+        }
+        else {
+          answer4.innerHTML = "You got my favorite color wrong!";
+        }
+
+        if (sibling.checked){
+          answer3.innerHTML = "You got my sister's name right!";
+        }
+        else {
+          answer3.innerHTML = "You got my sister's name wrong!";
+        }
+
+        if (dog.checked){
+          answer5.innerHTML = "You got this question right!";
+        }
+        else {
+          answer5.innerHTML = "You got this question wrong!";
+        }
+
+        if (fear.checked){
+          answer6.innerHTML = "You got my biggest fear right!";
+        }
+        else {
+          answer6.innerHTML = "You got my biggest fear wrong!";
+        }
+
+      }
+
+    </script>
+
+  </body>
+
+</html>
